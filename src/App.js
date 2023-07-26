@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { Home, About, Contact, Blog } from './components/Pages';
@@ -9,7 +8,7 @@ const App = () => {
     <Router>
       <div>
         <Header />
-        <Routes>
+        <Routes> {/* Use Routes instead of Switch */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
